@@ -7,12 +7,13 @@ async function setup(){
         const data = await db.exec(
             `
             DROP TABLE IF EXISTS cat;
-            CREATE TABLE departments (
-            department_id INTEGER NOT NULL UNIQUE,
+            CREATE TABLE cat (
+            cat_id INTEGER NOT NULL UNIQUE,
             name TEXT NOT NULL,
-            PRIMARY KEY(department_id AUTOINCREMENT)
+            cat_image  BLOB NOT NULL,
+            cat_like INTEGER,
+            PRIMARY KEY(cat_id AUTOINCREMENT)
             );
-          
             `
         )
         await db.close();

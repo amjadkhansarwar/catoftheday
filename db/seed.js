@@ -3,7 +3,7 @@ const db = new PromisedDatabase()
 
 async function seed(){
     try{
-        await db.open('./db/message.db')
+        await db.open('./db/cat.db')
         await db.run(`
         INSERT INTO departments ('name') VALUES
          ('IT'),

@@ -1,6 +1,13 @@
 {
+  "scripts": {
+    "start": "nodemon app.js",
+    "setup": "node db/setup.js",
+    "seed": "node db/seed.js"
+  },
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "nodemon": "^2.0.15",
     "promised-sqlite3": "^1.2.0"
   }
 }

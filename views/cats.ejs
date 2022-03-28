@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Cats</h1>
+        <% console.log(cats)
+        for(cat of cats){
+            %>
+            <label for=""><%= cat.cat_id%></label>
+            <br>
+            <p><%= cat.name%></p>
+            <p><%= cat.cat_image%></p>
+            <img src="/images/<%=cat.cat_image%>" alt="">
+            <%}%>
+    </div>
+   
+</body>
+</html>

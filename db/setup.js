@@ -10,7 +10,7 @@ async function setup(){
             CREATE TABLE cat (
             cat_id INTEGER NOT NULL UNIQUE,
             name TEXT NOT NULL,
-            cat_image  BLOB NOT NULL,
+            cat_image  TEXT NOT NULL,
             cat_like INTEGER,
             PRIMARY KEY(cat_id AUTOINCREMENT)
             );

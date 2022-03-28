@@ -8,17 +8,21 @@
 </head>
 <body>
     <div class="wrapper">
+        <h1> <a href="/like">See Cat of Day</a> </h1>
+        <form action="like"  method="post" >
         <h1>Cats</h1>
-        <% console.log(cats)
+        <%
         for(cat of cats){
+            let id = cat.cat_id
             %>
-            <label for=""><%= cat.cat_id%></label>
-            <br>
-            <p><%= cat.name%></p>
-            <p><%= cat.cat_image%></p>
-            <img src="/images/<%=cat.cat_image%>" alt="">
-            <%}%>
+        <label for=""> Cat ID: <%= cat.cat_id%></label>
+        <p> Cat Name: <%= cat.name%></p>
+        <img src="images/<%= cat.cat_image%>" alt="" width="200" height="200">
+        <button type="hidden" name="id" value="<%= cat.cat_id%>" style="font-size:500%;color:red;">&hearts;</button>
+        <label for="">How many Likes i have :<%= cat.cat_like%></label>
+        <br>
+        <%}%>
+        </form>
     </div>
-   
 </body>
 </html>
